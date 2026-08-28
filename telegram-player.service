@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram Player
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 %h/telegram_player/player.py
+WorkingDirectory=%h/telegram_player
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
